@@ -1,7 +1,11 @@
-const sum = require('../src/main')
+const {Item, Shop} = require('../src/main')
 
-describe("Sum", () => {
-    it("should add two numbers together", () => {
-        expect(sum(1,2)).toEqual(3)
+describe("Gilded Rose", () => {
+    it('Aged Brie', () => { 
+        const item = new Item("Aged Brie", 0, 0); 
+
+        const shop = new Shop([item]); 
+
+        expect(shop.updateQuality()).toMatchObject([]);
     })
 })
